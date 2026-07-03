@@ -1,0 +1,130 @@
+# Project: LMS
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = main.o source/adminapp.o source/adminsysteam.o source/control.o source/file.o source/List.o source/login.o source/ordersys.o source/time.o source/user.o source/Win/adduserWin.o source/Win/createordwin.o source/Win/loginWin.o source/Win/regWin.o source/Win/resetpwdWin.o source/Win/resetroleWin.o source/Win/startWin.o source/Win/selectuserwin.o source/Win/selectorderwin.o source/Win/auditorder.o source/Win/resetorderwin.o source/resetuser.o source/Win/storagewin.o source/Win/storageinwin.o source/Win/ordertrackwin.o source/Win/storageoutwin.o source/Win/selectstoragewin.o source/Win/dispatchwin.o source/Win/createdispatchwin.o source/Win/selectdriverwin.o source/Win/drivermanagewin.o source/Win/editdriverwin.o source/Win/vehiclemanagewin.o source/Win/trackdispatchwin.o source/Win/analysiswin.o
+LINKOBJ  = main.o source/adminapp.o source/adminsysteam.o source/control.o source/file.o source/List.o source/login.o source/ordersys.o source/time.o source/user.o source/Win/adduserWin.o source/Win/createordwin.o source/Win/loginWin.o source/Win/regWin.o source/Win/resetpwdWin.o source/Win/resetroleWin.o source/Win/startWin.o source/Win/selectuserwin.o source/Win/selectorderwin.o source/Win/auditorder.o source/Win/resetorderwin.o source/resetuser.o source/Win/storagewin.o source/Win/storageinwin.o source/Win/ordertrackwin.o source/Win/storageoutwin.o source/Win/selectstoragewin.o source/Win/dispatchwin.o source/Win/createdispatchwin.o source/Win/selectdriverwin.o source/Win/drivermanagewin.o source/Win/editdriverwin.o source/Win/vehiclemanagewin.o source/Win/trackdispatchwin.o source/Win/analysiswin.o
+LIBS     = -L"D:/DEV-C++/Dev-Cpp/MinGW64/lib" -L"D:/DEV-C++/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -leasyx -leasyx -g3
+INCS     = -I"D:/DEV-C++/Dev-Cpp/MinGW64/include" -I"D:/DEV-C++/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/DEV-C++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/DEV-C++/Dev-Cpp/MinGW64/include" -I"D:/DEV-C++/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/DEV-C++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/DEV-C++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = LMS.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+source/adminapp.o: source/adminapp.cpp
+	$(CPP) -c source/adminapp.cpp -o source/adminapp.o $(CXXFLAGS)
+
+source/adminsysteam.o: source/adminsysteam.cpp
+	$(CPP) -c source/adminsysteam.cpp -o source/adminsysteam.o $(CXXFLAGS)
+
+source/control.o: source/control.cpp
+	$(CPP) -c source/control.cpp -o source/control.o $(CXXFLAGS)
+
+source/file.o: source/file.cpp
+	$(CPP) -c source/file.cpp -o source/file.o $(CXXFLAGS)
+
+source/List.o: source/List.cpp
+	$(CPP) -c source/List.cpp -o source/List.o $(CXXFLAGS)
+
+source/login.o: source/login.cpp
+	$(CPP) -c source/login.cpp -o source/login.o $(CXXFLAGS)
+
+source/ordersys.o: source/ordersys.cpp
+	$(CPP) -c source/ordersys.cpp -o source/ordersys.o $(CXXFLAGS)
+
+source/time.o: source/time.cpp
+	$(CPP) -c source/time.cpp -o source/time.o $(CXXFLAGS)
+
+source/user.o: source/user.cpp
+	$(CPP) -c source/user.cpp -o source/user.o $(CXXFLAGS)
+
+source/Win/adduserWin.o: source/Win/adduserWin.cpp
+	$(CPP) -c source/Win/adduserWin.cpp -o source/Win/adduserWin.o $(CXXFLAGS)
+
+source/Win/createordwin.o: source/Win/createordwin.cpp
+	$(CPP) -c source/Win/createordwin.cpp -o source/Win/createordwin.o $(CXXFLAGS)
+
+source/Win/loginWin.o: source/Win/loginWin.cpp
+	$(CPP) -c source/Win/loginWin.cpp -o source/Win/loginWin.o $(CXXFLAGS)
+
+source/Win/regWin.o: source/Win/regWin.cpp
+	$(CPP) -c source/Win/regWin.cpp -o source/Win/regWin.o $(CXXFLAGS)
+
+source/Win/resetpwdWin.o: source/Win/resetpwdWin.cpp
+	$(CPP) -c source/Win/resetpwdWin.cpp -o source/Win/resetpwdWin.o $(CXXFLAGS)
+
+source/Win/resetroleWin.o: source/Win/resetroleWin.cpp
+	$(CPP) -c source/Win/resetroleWin.cpp -o source/Win/resetroleWin.o $(CXXFLAGS)
+
+source/Win/startWin.o: source/Win/startWin.cpp
+	$(CPP) -c source/Win/startWin.cpp -o source/Win/startWin.o $(CXXFLAGS)
+
+source/Win/selectuserwin.o: source/Win/selectuserwin.cpp
+	$(CPP) -c source/Win/selectuserwin.cpp -o source/Win/selectuserwin.o $(CXXFLAGS)
+
+source/Win/selectorderwin.o: source/Win/selectorderwin.cpp
+	$(CPP) -c source/Win/selectorderwin.cpp -o source/Win/selectorderwin.o $(CXXFLAGS)
+
+source/Win/auditorder.o: source/Win/auditorder.cpp
+	$(CPP) -c source/Win/auditorder.cpp -o source/Win/auditorder.o $(CXXFLAGS)
+
+source/Win/resetorderwin.o: source/Win/resetorderwin.cpp
+	$(CPP) -c source/Win/resetorderwin.cpp -o source/Win/resetorderwin.o $(CXXFLAGS)
+
+source/resetuser.o: source/resetuser.cpp
+	$(CPP) -c source/resetuser.cpp -o source/resetuser.o $(CXXFLAGS)
+
+source/Win/storagewin.o: source/Win/storagewin.cpp
+	$(CPP) -c source/Win/storagewin.cpp -o source/Win/storagewin.o $(CXXFLAGS)
+
+source/Win/storageinwin.o: source/Win/storageinwin.cpp
+	$(CPP) -c source/Win/storageinwin.cpp -o source/Win/storageinwin.o $(CXXFLAGS)
+
+source/Win/ordertrackwin.o: source/Win/ordertrackwin.cpp
+	$(CPP) -c source/Win/ordertrackwin.cpp -o source/Win/ordertrackwin.o $(CXXFLAGS)
+
+source/Win/storageoutwin.o: source/Win/storageoutwin.cpp
+	$(CPP) -c source/Win/storageoutwin.cpp -o source/Win/storageoutwin.o $(CXXFLAGS)
+
+source/Win/selectstoragewin.o: source/Win/selectstoragewin.cpp
+	$(CPP) -c source/Win/selectstoragewin.cpp -o source/Win/selectstoragewin.o $(CXXFLAGS)
+
+source/Win/dispatchwin.o: source/Win/dispatchwin.cpp
+	$(CPP) -c source/Win/dispatchwin.cpp -o source/Win/dispatchwin.o $(CXXFLAGS)
+
+source/Win/createdispatchwin.o: source/Win/createdispatchwin.cpp
+	$(CPP) -c source/Win/createdispatchwin.cpp -o source/Win/createdispatchwin.o $(CXXFLAGS)
+
+source/Win/selectdriverwin.o: source/Win/selectdriverwin.cpp
+	$(CPP) -c source/Win/selectdriverwin.cpp -o source/Win/selectdriverwin.o $(CXXFLAGS)
+
+source/Win/drivermanagewin.o: source/Win/drivermanagewin.cpp
+	$(CPP) -c source/Win/drivermanagewin.cpp -o source/Win/drivermanagewin.o $(CXXFLAGS)
+
+source/Win/editdriverwin.o: source/Win/editdriverwin.cpp
+	$(CPP) -c source/Win/editdriverwin.cpp -o source/Win/editdriverwin.o $(CXXFLAGS)
+
+source/Win/vehiclemanagewin.o: source/Win/vehiclemanagewin.cpp
+	$(CPP) -c source/Win/vehiclemanagewin.cpp -o source/Win/vehiclemanagewin.o $(CXXFLAGS)
+
+source/Win/trackdispatchwin.o: source/Win/trackdispatchwin.cpp
+	$(CPP) -c source/Win/trackdispatchwin.cpp -o source/Win/trackdispatchwin.o $(CXXFLAGS)
+
+source/Win/analysiswin.o: source/Win/analysiswin.cpp
+	$(CPP) -c source/Win/analysiswin.cpp -o source/Win/analysiswin.o $(CXXFLAGS)
